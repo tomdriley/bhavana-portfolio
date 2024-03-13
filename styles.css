@@ -17,27 +17,6 @@ html {
     Layout
   ----------------------------------------------------------------------------- */
 
-header {
-  position: sticky;
-  top: 0;
-}
-
-header nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-header ul {
-  display: flex;
-}
-
-header li {
-  padding: 0.2em 1.5em;
-  margin: 0.5em;
-  border-radius: 10px;
-}
-
-/* Container for body */
 header nav,
 main section,
 footer div {
@@ -46,21 +25,20 @@ footer div {
   padding-inline: 1em;
 }
 
+header li {
+  padding: 0.2em 1.5em;
+  margin: 0.5em;
+  border-radius: 10px;
+}
+
 /* Fit image to parent container */
 img {
   width: 100%;
 }
 
-/* Full width for print view */
-@media print {
-  body {
-    max-width: none;
-  }
-}
-
 .title-card {
-  padding: 2em 4em;
   border-radius: 10px;
+  padding-block: 2em;
 }
 
 .social-icon {
@@ -84,14 +62,52 @@ h2 {
   margin: 0.5em 0;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-around;
-  padding: 3em 0;
+.footer-section {
+  margin: 2em 0;
+}
+
+footer {
+  padding-block: 1em;
+}
+
+@media (max-width: 40em) {
+  #logo {
+    max-width: 5em;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 40em) {
+  header nav,
+  main section,
+  footer div {
+    margin: 0 auto;
+    max-width: 60em;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header ul {
+    display: flex;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+  }
 }
 
 @media (min-width: 60em) {
   .title-card {
+    padding-inline: 4em;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -123,30 +139,30 @@ header li {
 }
 
 .title-card h1 {
-  font: 4em/1.2 sans-serif;
+  font: clamp(2rem, 16vw, 4rem) / 1.2 sans-serif;
   font-weight: bolder;
 }
 
 .title-card p {
-  font: 1.1em/1.62 sans-serif;
+  font: 1.1rem/1.62 sans-serif;
 }
 
 h2 {
-  font: 2em/1.2 sans-serif;
+  font: 2rem/1.2 sans-serif;
   font-weight: bold;
 }
 
 h3 {
-  font: 1.2em/1.2 sans-serif;
+  font: 1.2rem/1.2 sans-serif;
   font-weight: 600;
 }
 
 body {
-  font: 1.2em/1.62 sans-serif;
+  font: 1.2rem/1.62 sans-serif;
 }
 
 footer h1 {
-  font-size: 1.6em;
+  font-size: 1.6rem;
 }
 
 /* -----------------------------------------------------------------------------
